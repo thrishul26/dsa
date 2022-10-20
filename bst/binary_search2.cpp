@@ -6,7 +6,7 @@ int binary_search(int *arr, int low, int high, int key)
     if (low > high)
         return -1;
 
-    int mid = (low + high) / 2;
+    int mid = (high+low) / 2;
 
     if (key == arr[mid])
     {
@@ -31,10 +31,10 @@ int binary_search(int *arr, int low, int high, int key)
 
 int main()
 {
-    int arr[7] = {1, 3, 23, 432, 23, 432, 2};
-    int search = 3;
+    int arr[5]={6,2,90,36,69}
+    int search = 36;
 
-    cout << binary_search(arr, 0, 7, search) + 1;
+    cout << binary_search(arr, 0, 5, search) + 1;
 
     return 0;
 }
